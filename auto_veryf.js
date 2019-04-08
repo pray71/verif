@@ -15,7 +15,7 @@ console.log("#####################");
 console.log("");
 console.log("");
 
-const apikey = "wvOofySn5H1LmqHqRMBJ15i8iE9wdDKR8kTR9jxu";
+const apikey = readline.question("Masukan Api Key : ");
 const file = readline.question("Masukan nama file result : ");
 
 const DelaY = readline.question(
@@ -124,7 +124,6 @@ const functionGetLocation = domain =>
     array.map(async eml => {
       if (eml.length > 2) {
         const regMail = /(?<=@)[^.]+.([^.]+)$/m;
-
         const uname = eml.substring(0, eml.lastIndexOf("@"));
         const domain = eml.substring(eml.lastIndexOf("@") + 1);
 
